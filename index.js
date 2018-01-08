@@ -1,6 +1,24 @@
 var express = require('express');
+var morgan = require("morgan");
 
 var app = express();
+
+app.use(morgan("dev"));
+
+app.use(function(req, res, next) {
+    console.log("Procesando petición...0");
+    next();
+});
+
+
+app.use(function(req, res, next) {
+    if (req.url === '/DETENER') {
+        res.end("DETENIDO\n");
+    } else {
+        console.log("Procesando petición...1");
+        next();
+    }
+});
 
 app.get("/usuarios/:idUsuario", function(req, res, next) {
     if (parseInt(req.params.idUsuario) > 1000) { 
