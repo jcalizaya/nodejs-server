@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/jcalizaya/nodejs-server#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.29.0"
   }
 }
