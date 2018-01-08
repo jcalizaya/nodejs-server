@@ -1,0 +1,26 @@
+{
+  "name": "nodejs_server",
+  "version": "1.0.0",
+  "description": "Prueba de nodejs y expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcalizaya/nodejs-server.git"
+  },
+  "keywords": [
+    "prueba",
+    "expressjs"
+  ],
+  "author": "NODEJS",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jcalizaya/nodejs-server/issues"
+  },
+  "homepage": "https://github.com/jcalizaya/nodejs-server#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
