@@ -1,7 +1,13 @@
 var express = require('express');
 var morgan = require("morgan");
-
 var app = express();
+
+var db = require('./db');
+
+
+db.sequelize.sync().done(() => {
+    console.log("base de datos generada"); 
+});
 
 app.use(morgan("dev"));
 
