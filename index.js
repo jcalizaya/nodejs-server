@@ -26,6 +26,19 @@ app.use(function(req, res, next) {
     }
 });
 
+app.get("/usuarios/", function(req, res) {
+    db.usuario.findAll()
+    .then(respuesta => {
+        console.log(respuesta);
+        res.writeHead(200, {
+            'Content-Type': 'application/json',
+        });
+        console.log(respuesta);
+        res.end(JSON.stringify({"mensaje": "Usuarios Listados", "datos": respuesta}));
+    }).catch(error => res.end("Error: ", error.message));
+    
+});
+
 app.get("/usuarios/:idUsuario", function(req, res, next) {
     if (parseInt(req.params.idUsuario) > 1000) { 
         res.end("Devolviendo usuario mayor a 1000: " + req.params.idUsuario + '\n');
